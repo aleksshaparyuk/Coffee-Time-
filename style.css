@@ -1,0 +1,488 @@
+/* Сброс базовых стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    /* Современный шрифт без засечек */
+}
+
+body {
+    background-color: #ffffff;
+    color: #111111;
+    line-height: 1.6;
+}
+
+/* --- ШАПКА (Компактная и современная) --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    /* 5% по бокам вместо 50px — сайт всегда выглядит пропорционально */
+    background-color: #111111;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    /* Легкая тень снизу для четкой границы */
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+    color: #ff8c00;
+    letter-spacing: 1px;
+    /* Чуть разряжаем буквы для стиля */
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+    /* Ровные промежутки между ссылками вместо margin */
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    /* Заглавные буквы делают меню собранным */
+    letter-spacing: 0.5px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff8c00;
+}
+
+/* --- Обновляем мобильную шапку --- */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav {
+        gap: 20px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+}
+
+/* --- ГЛАВНЫЙ ЭКРАН (Hero) --- */
+.hero {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 15px 30px;
+    background-color: #ff8c00;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #e67e00;
+}
+
+/* --- МЕНЮ (Используем CSS Grid!) --- */
+.menu {
+    padding: 80px 50px;
+    text-align: center;
+}
+
+.menu h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+/* Вот она — магия Grid! */
+.menu-grid {
+    display: grid;
+    /* Автоматически создаёт колонки шириной минимум 250px */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    border: 2px solid #111111;
+    padding: 30px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    /* Карточка "всплывает" при наведении */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff8c00;
+}
+
+/* --- ПОДВАЛ --- */
+footer {
+    background-color: #111111;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* --- СЕКЦИЯ О НАС --- */
+.about {
+    padding: 80px 50px;
+    background-color: #ffffff;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.about h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* --- ГАЛЕРЕЯ --- */
+.gallery {
+    padding: 80px 50px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.gallery h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* --- КОНТАКТЫ --- */
+.contact {
+    padding: 80px 50px;
+    text-align: center;
+    background-color: #111111;
+    color: #ffffff;
+}
+
+.contact h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+    color: #ff8c00;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.info-item h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #ff8c00;
+}
+
+.info-item p {
+    color: #cccccc;
+    line-height: 1.8;
+}
+
+/* ========================================
+   МОБИЛЬНАЯ АДАПТАЦИЯ (Media Queries)
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    /* Шапка */
+    header {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    nav a {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+
+    /* Hero секция */
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+        padding: 0 20px;
+    }
+
+    /* Меню */
+    .menu {
+        padding: 40px 20px;
+    }
+
+    .menu h2 {
+        font-size: 32px;
+    }
+
+    /* О нас */
+    .about {
+        padding: 40px 20px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        /* Одна колонка на мобильном */
+        gap: 30px;
+    }
+
+    .about h2 {
+        font-size: 32px;
+    }
+
+    /* Галерея */
+    .gallery {
+        padding: 40px 20px;
+    }
+
+    .gallery h2 {
+        font-size: 32px;
+    }
+
+    /* Контакты */
+    .contact {
+        padding: 40px 20px;
+    }
+
+    .contact h2 {
+        font-size: 32px;
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+        /* Одна колонка */
+        gap: 30px;
+    }
+}
+
+/* Для очень маленьких экранов (меньше 480px) */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .card {
+        padding: 20px;
+    }
+}
+
+/* --- Стили для фильтров --- */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 2px solid #ff8c00;
+    color: #111111;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #ff8c00;
+    color: #ffffff;
+}
+
+/* --- Обновленные стили для карточек меню --- */
+.menu-grid .card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-grid .photo {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid #ff8c00;
+}
+
+.item-info {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-info header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.item-info h4 {
+    font-size: 18px;
+    color: #111111;
+}
+
+.item-info .price {
+    color: #ff8c00;
+    font-weight: bold;
+}
+
+.item-text {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.add-to-cart-btn {
+    background: #111111;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    background: #ff8c00;
+}
+
+/* --- Иконка корзины в шапке --- */
+.cart-icon {
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    transition: transform 0.2s;
+}
+
+#cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: #ff8c00;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Time - Best Coffee in Town</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Шапка сайта -->
+    <header>
+        <div class="logo">Coffee Time ☕</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <!-- Иконка корзины -->
+            <div class="cart-icon">
+                🛒 <span id="cart-count">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Главный экран (Hero) -->
+    <section class="hero" id="home">
+        <h1>Best Coffee in Town</h1>
+        <p>Freshly roasted, perfectly brewed.</p>
+        <a href="#menu" class="btn">View Menu</a>
+    </section>
+
+    <!-- Секция Меню с фильтрами -->
+    <section class="menu" id="menu">
+        <h2>Our Menu</h2>
+
+        <!-- Кнопки фильтрации -->
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="hot">Hot Coffee</button>
+            <button class="filter-btn" data-filter="cold">Cold Drinks</button>
+            <button class="filter-btn" data-filter="pastry">Pastries</button>
+        </div>
+
+        <!-- Сюда JavaScript будет вставлять карточки -->
+        <div class="menu-grid" id="menu-container">
+            <!-- Карточки появятся здесь автоматически! -->
+        </div>
+    </section>
+
+    <!-- Секция О нас -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>About Us</h2>
+                <p>Welcome to Coffee Time! We've been serving the finest coffee in town since 2020. Our beans are
+                    ethically sourced from the best coffee-growing regions around the world.</p>
+                <p>Every cup is crafted with passion and precision by our skilled baristas.</p>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600" alt="Coffee Shop Interior">
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция Галерея -->
+    <section class="gallery">
+        <h2>Our Atmosphere</h2>
+        <div class="gallery-grid">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400" alt="Coffee 1">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400" alt="Coffee 2">
+            <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=400" alt="Coffee 3">
+            <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=400" alt="Coffee 4">
+        </div>
+    </section>
+
+    <!-- Секция Контакты -->
+    <section class="contact" id="contact">
+        <h2>Visit Us</h2>
+        <div class="contact-info">
+            <div class="info-item">
+                <h3>📍 Address</h3>
+                <p>123 Coffee Street<br>New York, NY 10001</p>
+            </div>
+            <div class="info-item">
+                <h3>🕒 Hours</h3>
+                <p>Mon - Fri: 7:00 AM - 8:00 PM<br>Sat - Sun: 8:00 AM - 9:00 PM</p>
+            </div>
+            <div class="info-item">
+                <h3>📞 Contact</h3>
+                <p>Phone: (555) 123-4567<br>Email: hello@coffeetime.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал сайта (теперь он один и в правильном месте!) -->
+    <footer>
+        <p>&copy; 2026 Coffee Time. All rights reserved.</p>
+        <p>Made with ❤️ for coffee lovers</p>
+    </footer>
+
+    <!-- Подключаем наш JavaScript файл в самом конце -->
+    <script src="script.js"></script>
+</body>
+
+</html>
